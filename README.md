@@ -15,8 +15,9 @@ Rename `src/config-sample.js` to `src/config.js` then add your apikey from [them
 ![Search keyword the](https://raw.githubusercontent.com/prakash118/search-themoviedb/master/screenshots/thor.png)
 ![Search keyword 2017](https://raw.githubusercontent.com/prakash118/search-themoviedb/master/screenshots/year.png)
 
-##Todo
+## Todo
 
 - Add Test
+- Replace bootstrap with styled-component
 - Add load more button
 - Refactor code
