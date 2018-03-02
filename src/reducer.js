@@ -9,7 +9,6 @@ import {
 const init = {
   keyword: null,
   movies: null,
-  filterMovies: null,
   error: null,
 };
 
@@ -24,11 +23,6 @@ const reducer = (state = init, action) => {
       return {
         ...state,
         movies: action.data,
-        filterMovies: action.data,
-      };
-    case FILTER_MOVIES:
-      return {
-        ...state,
         filterMovies: action.data,
       };
     case ERROR:

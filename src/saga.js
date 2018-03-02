@@ -36,24 +36,6 @@ export function* getMovies() {
   }
 }
 
-export function* filterMovies(action) {
-  const { keyword } = action;
-  const lowerKeyword = keyword.toLowerCase();
-  const { movies } = yield select();
-  if (lowerKeyword.length >= 1) {
-    const filter = movies.filter((movie) => {
-      const { lowercaseTitle, year } = movie;
-      if (lowercaseTitle.indexOf(lowerKeyword) !== -1 || year.indexOf(lowerKeyword) !== -1) {
-        return movie;
-      }
-    });
-    yield put({ type: FILTER_MOVIES, data: filter });
-  } else {
-    yield put({ type: FILTER_MOVIES, data: movies });
-  }
-}
-
 export default function* rootSaga() {
   yield call(getMovies);
-  yield takeLatest(INPUT_KEYWORD, filterMovies);
 }
